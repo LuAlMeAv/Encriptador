@@ -66,10 +66,19 @@ function desencriptar() {
 
 function copiar() {
     navigator.clipboard.writeText(salida.innerHTML)
+
+    btnCopiar.setAttribute("class", "copiado")
+    btnCopiar.innerHTML = "Copiado"
+}
+
+function resetbtn() {
+    btnCopiar.setAttribute("class", "")
+    btnCopiar.innerHTML = "Copiar"
 }
 
 
 btnEncriptar.onclick = encriptar
 btnDesencriptar.onclick = desencriptar
 btnCopiar.onclick = copiar
+btnCopiar.onmouseleave = resetbtn
 entrada.onkeyup = comprobacion

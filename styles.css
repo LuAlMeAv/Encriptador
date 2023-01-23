@@ -42,12 +42,18 @@ main {
 .mensaje textarea {
     display: block;
     background: none;
-    border: none;
     width: 100%;
     font-size: 1.5em;
     color: #0A3871;
     padding: 7px;
     font-weight: bold;
+    /*Eliminar estilos por defecto*/
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     resize: none;
 }
 
@@ -140,6 +146,10 @@ button:active {
 .respuesta button {
     width: 90%;
     margin: 25px;
+}
+.copiado {
+    background: green;
+    color: #ffffff;
 }
 
 footer {
